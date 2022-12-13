@@ -17,7 +17,7 @@ ac=$(cat /root/$1/alive.txt | wc -l)
 echo -e "\e[1;36mFound ${ac} Alive Domains..!\e[0m"
 
 ##Nuclei
-cat /root/$1/alive.txt | nuclei -t /home/$USER/cent/cent-nuclei-templates -es info | anew /root/$1/nuclei-results.txt 
+cat /root/$1/alive.txt | nuclei -t /root/cent-nuclei-templates -es info | anew /root/$1/nuclei-results.txt 
 echo -e "\e[1;36mNuclei Results Done..!\e[0m"
 
 ##XRAY
