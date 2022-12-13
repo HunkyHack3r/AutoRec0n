@@ -120,6 +120,7 @@ fi
 if ! command -v cent &> /dev/null
 then
     echo -e "\e[31mCent could not be found!\e[0m"
+    cd /root/
     wget -c https://github.com/xm1k3/cent/releases/download/v1.0/cent
     chmod +x cent
     mv cent /usr/local/bin/cent
