@@ -5,9 +5,10 @@ if ! command -v go &> /dev/null
 then
     echo "Go could not be found!"
     wget -c https://go.dev/dl/go1.19.4.linux-amd64.tar.gz
-    sudo tar -C /usr/local -xvzf go1.19.4.linux-amd64.tar.gz
+    sudo rm -rf /usr/local/go && tar -C /usr/local -xzf go1.19.4.linux-amd64.tar.gz
     export PATH=$PATH:/usr/local/go/bin
     source ~/.bash_profile
+    source ~/.profile
     if ! command -v go &> /dev/null
     then
         echo "Go installation failed!"
