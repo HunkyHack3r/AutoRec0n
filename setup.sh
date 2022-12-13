@@ -120,7 +120,9 @@ fi
 if ! command -v cent &> /dev/null
 then
     echo "Cent could not be found!"
-    GO111MODULE=on go install -v github.com/xm1k3/cent@latest
+    wget -c https://github.com/xm1k3/cent/releases/download/v1.0/cent
+    chmod +x cent
+    mv cent /usr/local/bin/cent
     cent init
     cent -p cent-nuclei-templates -k
     if ! command -v cent &> /dev/null
@@ -151,5 +153,6 @@ else
     echo "Script Ends...."
 fi
 
+clear
 chmod +x autorecon.sh
 sh autorecon.sh                                                                                                                                                                                                                                                                                                                                      
