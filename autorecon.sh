@@ -17,7 +17,7 @@ Version()
 }
 
 ##Get the options
-while getopts ":h" option; do
+while getopts ":hv:" option; do
    case $option in
       h) # display Help
          Help
