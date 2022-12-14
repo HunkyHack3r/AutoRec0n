@@ -22,10 +22,10 @@ while getopts ":hv:" option; do
       h) # display Help
          Help
          exit;;
-      v) # display version
+      v) # Enter a name
          Version
          exit;;
-     \?) # incorrect option
+     \?) # Invalid option
          echo "Error: Invalid option"
          exit;;
    esac
