@@ -25,7 +25,7 @@ done
 
 while getopts ":v" option; do
    case $option in
-      h) # display Help
+      v) # display Help
          echo "AutoRec0n v1.0"
          exit;;
      \?) # incorrect option
