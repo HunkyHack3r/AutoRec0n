@@ -1,5 +1,16 @@
 #!/bin/bash 
 
+Help()
+{
+   #Display Help
+   echo "Syntax: ./autorecon.sh <target>"
+   echo "Eg: ./autorecon.sh google.com"
+   echo "options:"
+   echo "h     Print this Help."
+   echo "v     Print software version and exit."
+   echo
+}
+
 ##Get the options
 while getopts ":h" option; do
    case $option in
@@ -22,17 +33,6 @@ while getopts ":v" option; do
          exit;;
    esac
 done
-
-Help()
-{
-   #Display Help
-   echo "Syntax: ./autorecon.sh <target>"
-   echo "Eg: ./autorecon.sh google.com"
-   echo "options:"
-   echo "h     Print this Help."
-   echo "v     Print software version and exit."
-   echo
-}
 
 ##Creating Folders
 domain=$1
