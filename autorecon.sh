@@ -8,7 +8,12 @@ Help()
    echo "options:"
    echo "h     Print this Help."
    echo "v     Print software version and exit."
-   echo
+}
+
+Version()
+{
+   #Display version
+   echo "AutoRec0n v1.0"
 }
 
 ##Get the options
@@ -18,7 +23,7 @@ while getopts ":h" option; do
          Help
          exit;;
       v) # display version
-         echo "AutoRec0n v1.0"
+         Version
          exit;;
      \?) # incorrect option
          echo "Error: Invalid option"
