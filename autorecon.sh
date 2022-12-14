@@ -17,15 +17,7 @@ while getopts ":h" option; do
       h) # display Help
          Help
          exit;;
-     \?) # incorrect option
-         echo "Error: Invalid option"
-         exit;;
-   esac
-done
-
-while getopts ":v" option; do
-   case $option in
-      v) # display Help
+      v) # display version
          echo "AutoRec0n v1.0"
          exit;;
      \?) # incorrect option
